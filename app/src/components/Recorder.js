@@ -8,9 +8,9 @@ export default class Recorder extends React.Component {
   constructor(props) {
     super(props);
 
-      this.state = {
-          record: false,
-      };
+    this.state = {
+      record: false,
+    };
   }
 
   onStop = (recordedBlob) => {
@@ -31,20 +31,20 @@ export default class Recorder extends React.Component {
 
   render() {
     return (
-        <div>
+      <div>
         <ReactMic
-      record={this.state.record}
-      className="sound-wave"
-      onStop={this.onStop}
-      strokeColor="#000"
-      backgroundColor="#fff"
-          />
-          <div className="fab">
-        <Fab color="secondary" onClick={this.toggleRecording}>
-        <i className="material-icons">{this.state.record ? 'stop' : 'mic'}</i>
-        </Fab>
+          record={this.state.record}
+          className="sound-wave"
+          onStop={this.onStop}
+          strokeColor="#000"
+          backgroundColor="#fff"
+        />
+        <div className="fab">
+          <Fab color="secondary" onClick={this.toggleRecording}>
+            <i className="material-icons">{this.state.record ? 'stop' : 'mic'}</i>
+          </Fab>
         </div>
-          </div>
+      </div>
     );
   }
 }

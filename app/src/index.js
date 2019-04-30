@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './style.scss';
-import Recorder from './components/Recorder';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import FormData from 'form-data';
+import Recorder from './components/Recorder';
 import Output from './components/Output';
 
 
@@ -17,8 +17,8 @@ class App extends React.Component {
       audioBlob: null,
       text: '',
       confidenceLevel: null,
-    }
-  };
+    };
+  }
 
   handleLoading = () => {
     if (this.state.loading) {
@@ -53,7 +53,6 @@ class App extends React.Component {
       const request = new XMLHttpRequest();
 
       request.onload = () => {
-
         if (request.response !== undefined) {
           const outputFromIBM = request.response.results[0].alternatives[0];
 
@@ -72,13 +71,12 @@ class App extends React.Component {
   };
 
   render() {
-
     console.log(this.state.text);
 
     return (
       <div className="container">
         <Output audioText={this.state.audioText} text={this.state.text} confidenceLevel={this.state.confidenceLevel} />
-      {this.handleLoading()}
+        {this.handleLoading()}
       </div>
     );
   }
