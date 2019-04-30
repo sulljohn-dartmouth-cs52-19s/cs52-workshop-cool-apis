@@ -2,4 +2,4 @@
 
 *Completed by John Sullivan 4/30/2019*
 
-Surge URL: [Link](https://sulljohn-cs52-material.surge.sh/)
+There is no deployed URL because this workshop required a server.
