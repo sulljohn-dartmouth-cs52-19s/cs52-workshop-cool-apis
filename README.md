@@ -6,4 +6,4 @@ There is no deployed URL because this workshop required a server.
 
 ## Preview
 
-![](readme_content/screenshot.png)
+![](readme-content/screenshot.png)
